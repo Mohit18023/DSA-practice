@@ -9,7 +9,10 @@ int main(){
     cin>>col;
     cout<<"Enter the number of rows: ";
     cin>>row;
-    int matrix[row][col];
+    int **matrix = new int*[row];
+    for(int i=0;i<row;i++){
+        matrix[i] = new int[col];
+    }
 
     cout<<"Enter the elements: "<<endl;
     for(int i=0;i<row;i++){
