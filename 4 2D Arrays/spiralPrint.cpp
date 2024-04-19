@@ -51,7 +51,55 @@ vector<int> spiralPrint(vector<vector<int>>& arr){
     }
     return ans;
 }
+// vector<int> spiralOrder(vector<vector<int>> &matrix)
+// {
+//     int rows = matrix.size();
+//     int cols = matrix[0].size();
+//     vector<int> result;
+    
 
+//     int T = 0;
+//     int B = rows - 1;
+//     int L = 0;
+//     int R = cols - 1;
+
+//     while (T <= B && L <= R)
+//     {
+
+//         // Now run the loops  for top -------> right
+//         for (int i = L; i <= R; i++)
+//         {
+//             result.push_back(matrix[T][i]);
+//         }
+
+//         // increment the top variable
+//         T++;
+
+//         // Run the loop for right --------> bottom
+//         for (int i = T; i <= B; i++)
+//         {
+//             result.push_back(matrix[i][R]);
+//         }
+
+//         // decrement the right
+//         R--;
+
+//         // run the loop from bottom right -------> bottom left
+//         for (int i = R; i >= L; i--)
+//         {
+//             result.push_back(matrix[B][i]);
+//         };
+//         B--;
+
+//         for (int i = B; i >= T; i--)
+//         {
+//             result.push_back(matrix[i][L]);
+//         }
+
+//         L++;
+//     }
+//     return result;
+// }
 void print(vector<vector<int>> arr)
 {
     int row = arr.size();
@@ -88,7 +136,7 @@ int main(){
     print(arr);
 
     cout<<"Printing the spiral: "<<endl;
-    vector<int> ans = spiralPrint(arr);
+    vector<int> ans = spiralOrder(arr);
     for(int i=0;i<ans.size();i++){
         cout<<ans[i]<<" ";
     }
